@@ -1,12 +1,12 @@
 #!/usr/bin/env node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm
+import { readFileSync, writeFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
 import { parse } from '@babel/parser';
 import { NodePath } from '@babel/traverse';
 import { TSType, TSTypeAliasDeclaration, TSTypeElement, TSTypeReference } from '@babel/types';
 import groupBy from '@nkzw/core/groupBy.js';
 import sortBy from '@nkzw/core/sortBy.js';
 import chalk from 'chalk';
-import { readFileSync, writeFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
 import { format } from 'oxfmt';
 import sign from './lib/sign.tsx';
 import traverse from './lib/traverse.tsx';

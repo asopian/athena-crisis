@@ -1,10 +1,10 @@
 #!/usr/bin/env node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm
-import toSlug from '@deities/apollo/lib/toSlug.tsx';
-import chalk from 'chalk';
-import { globSync } from 'glob';
 import { writeFileSync } from 'node:fs';
 import { join, posix, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import toSlug from '@deities/apollo/lib/toSlug.tsx';
+import chalk from 'chalk';
+import { globSync } from 'glob';
 import { format } from 'oxfmt';
 import sign from './lib/sign.tsx';
 

@@ -1,10 +1,10 @@
 #!/usr/bin/env node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { parse } from '@babel/parser';
 import { NodePath } from '@babel/traverse';
 import { JSXIdentifier } from '@babel/types';
 import chalk from 'chalk';
-import { existsSync, readFileSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
 import { format } from 'oxfmt';
 import isOpenSource from '../infra/isOpenSource.tsx';
 import sign from './lib/sign.tsx';

@@ -1,8 +1,8 @@
 #!/usr/bin/env node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm
-import chalk from 'chalk';
-import { globSync } from 'glob';
 import { writeFileSync } from 'node:fs';
 import { join, posix, relative, sep } from 'node:path';
+import chalk from 'chalk';
+import { globSync } from 'glob';
 import { format } from 'oxfmt';
 import isOpenSource from '../infra/isOpenSource.tsx';
 import sign from './lib/sign.tsx';

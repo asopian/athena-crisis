@@ -1,9 +1,9 @@
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import deities from '@deities/eslint-plugin';
 import fbtee from '@nkzw/eslint-plugin-fbtee';
 import findWorkspaces from '@nkzw/find-workspaces';
 import nkzw from '@nkzw/oxlint-config';
-import { existsSync } from 'node:fs';
-import { join } from 'node:path';
 import { defineConfig } from 'oxlint';
 
 const packageDir = findWorkspaces(import.meta.dirname).concat(

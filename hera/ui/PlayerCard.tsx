@@ -1,5 +1,3 @@
-import type Player from '@deities/athena/map/Player.tsx';
-import type MapData from '@deities/athena/MapData.tsx';
 import {
   capturedByPlayer,
   destroyedBuildingsByPlayer,
@@ -13,7 +11,9 @@ import calculateUnitValue from '@deities/athena/lib/calculateUnitValue.tsx';
 import canActivatePower from '@deities/athena/lib/canActivatePower.tsx';
 import matchesPlayerList from '@deities/athena/lib/matchesPlayerList.tsx';
 import { Charge, TileSize } from '@deities/athena/map/Configuration.tsx';
+import type Player from '@deities/athena/map/Player.tsx';
 import { isBot, PlayerIDs } from '@deities/athena/map/Player.tsx';
+import type MapData from '@deities/athena/MapData.tsx';
 import { Criteria, Objective, objectiveHasAmounts } from '@deities/athena/Objectives.tsx';
 import clipBorder from '@deities/ui/clipBorder.tsx';
 import useInput from '@deities/ui/controls/useInput.tsx';

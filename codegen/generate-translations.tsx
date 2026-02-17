@@ -1,4 +1,7 @@
 #!/usr/bin/env node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm
+import { writeFileSync } from 'node:fs';
+import { basename, extname, join, posix, sep } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { GameEndCondition, OptionalObjectiveCondition } from '@deities/apollo/Condition.tsx';
 import getMessageKey from '@deities/apollo/lib/getMessageKey.tsx';
 import { mapBuildings } from '@deities/athena/info/Building.tsx';
@@ -25,9 +28,6 @@ import parseInteger from '@nkzw/core/parseInteger.js';
 import sortBy from '@nkzw/core/sortBy.js';
 import chalk from 'chalk';
 import { globSync } from 'glob';
-import { writeFileSync } from 'node:fs';
-import { basename, extname, join, posix, sep } from 'node:path';
-import { pathToFileURL } from 'node:url';
 import { format } from 'oxfmt';
 import isOpenSource from '../infra/isOpenSource.tsx';
 import sign from './lib/sign.tsx';
